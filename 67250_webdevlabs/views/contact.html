@@ -8,7 +8,7 @@
         <script src="../static/script.js" defer></script>
         <title>Max Ladner</title>
     </head>
-    <body style="font-family: Arial">
+    <body style="font-family: Arial" onload="addYear()">
         <header>
             <h1 id="webname">Max Ladner</h1>
             <nav>
@@ -22,12 +22,15 @@
             <br>
             <form>
                 <label for="name">Name:</label><br>
-                <input type="text" id="name"><br>
+                <input type="text" id="name" required><br>
                 <label for="email">Email:</label><br>
-                <input type="text" id="email"><br>
+                <input type="text" id="email" required><br>
                 <label for="description">Description:</label><br>
-                <input type="text" id="description"><br>
+                <input type="text" id="description" required><br>
+                <button type="submit">Submit</button>
             </form>
+            <div id="validation-message" class="validation-message" 
+                style="display:none;"></div>
             <br>
             <table>
                 <tr>
@@ -48,7 +51,8 @@
         </div>
         <hr>
         <footer>
-            &copy; 2025 designed and coded by Max Ladner
+            &copy; designed and coded by Max Ladner
+            <p id="getYear"></p>
         </footer>
         
     </body>

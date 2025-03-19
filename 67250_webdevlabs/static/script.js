@@ -48,7 +48,72 @@ function greetingFunc() {
         E.innerHTML = "Good Night, my name is Max Ladner";
     }
 }
-window.onload = greetingFunc;
+function addYear() {
+    var g = new Date();
+    var year = g.getFullYear();
+    let p_tag = document.getElementById("getYear");
+    p_tag.innerHTML = year.toString();
+}
+window.onload=function(){
 
+    addYear();
+    greetingFunc();
+}
 
+function showList() {
+    const list = document.getElementById('my-list');
+    const b = document.getElementById('show-button');
 
+    list.style.display = 'block';
+
+    b.style.display = 'none';
+}
+
+$(document).ready(function() {
+    $('#toggle-bio').click(function() {
+        if ($('#full-bio').is(':hidden')) {
+            $('#full-bio').show();
+            $('#short-bio').hide();
+            $('#toggle-bio').text('Read Less');
+        } else {
+            $('#full-bio').hide();
+            $('#short-bio').show();
+            $('#toggle-bio').text('Read More');
+        }
+    });
+});
+
+const form = document.getElementById('contact-form');
+const message = document.getElementById('validation-message');
+
+form.addEventListener('submit', function(event) {
+
+    message.style.display = 'none';
+    message.innerHTML = '';
+
+    let is_valid = true;
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const description = document.getElementById('description');
+
+    if (!name.checkValidity()) {
+        is_valid = false;
+        message.innerHTML += '<p>Please enter your name.</p>';
+    }
+
+    if (!email.checkValidity()) {
+        is_valid = false;
+        message.innerHTML += '<p>Please enter a valid email address.</p>';
+    }
+
+    if (!description.checkValidity()) {
+        is_valid = false;
+        message.innerHTML += '<p>Please enter a description.</p>';
+    }
+
+    if (isValid) {
+        alert('Form submitted successfully!');
+    } else {
+        message.style.display = 'block';
+    }
+});
