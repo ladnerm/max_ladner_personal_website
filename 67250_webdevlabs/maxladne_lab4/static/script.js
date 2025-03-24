@@ -27,7 +27,7 @@ function findTheBanana(item) {
         alert("We found banana in first array");
     }
 }
-//L1.forEach(findTheBanana);
+L1.forEach(findTheBanana);
 
 var d = new Date();
 var h = d.getHours();
@@ -60,32 +60,14 @@ window.onload=function(){
     greetingFunc();
 }
 
-//function showList() {
-//    const list = document.getElementById('my-list');
-//    const b = document.getElementById('show-button');
-//
-//    list.style.display = 'block';
-//
-//    b.style.display = 'none';
-//}
+function showList() {
+    const list = document.getElementById('my-list');
+    const b = document.getElementById('show-button');
 
-function show_advice() {
-    fetch("https://api.adviceslip.com/advice").then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json();
-        }).then(data => {
-            document.getElementById("quote").innerText = data.slip.advice;
-            document.getElementById("advice_button").style.display = "none";
-        }).catch(error => {
-            document.getElementById("quote").innerText = "Failed to get advice. Please try again!";
-            console.error("Error fetching advice:", error);
-        });
+    list.style.display = 'block';
+
+    b.style.display = 'none';
 }
-
-
-    
 
 $(document).ready(function() {
     $('#toggle-bio').click(function() {
@@ -105,7 +87,7 @@ const form = document.getElementById('contact-form');
 const message = document.getElementById('validation-message');
 
 form.addEventListener('submit', function(event) {
-    if (window.location.href.includes("fun.html")) {
+
     message.style.display = 'none';
     message.innerHTML = '';
 
@@ -133,6 +115,5 @@ form.addEventListener('submit', function(event) {
         alert('Form submitted successfully!');
     } else {
         message.style.display = 'block';
-    }
     }
 });
