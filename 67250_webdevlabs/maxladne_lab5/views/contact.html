@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Max Ladner">
+        <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+        <meta name="description" content="Max Ladner's Professional Website">
+        <link rel="stylesheet" href="../static/style.css"> 
+        <script src="../static/script.js" defer></script>
+        <title>Max Ladner</title>
+    </head>
+    <body style="font-family: Arial" onload="addYear()">
+        <header>
+            <h1 id="webname">Max Ladner</h1>
+            <nav>
+                <a href="../index.html">HOME</a> 
+                <a href="cv.html">CV</a> 
+                <a href="contact.html">CONTACT ME</a> 
+                <a href="fun.html">FOR FUN</a> 
+            </nav>
+        </header>
+        <div class="mainLayout">
+            <br>
+            <div id="item1">
+            <h2>Find Me</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.96305781550446!3d-37.81627944202192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577aaf6e54aa42a!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1711212134567!5m2!1sen!2sus" 
+                    width="300" 
+                    height="300"> 
+                </iframe>
+            </div>
+            </div>
+            <div id="item2">
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" required><br>
+                <label for="description">Description:</label><br>
+                <input type="text" id="description" required><br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="validation-message" class="validation-message" 
+                style="display:none;"></div>
+            <br>
+            <table>
+                <tr>
+                    <th> Contact Method </th>
+                    <th> Description </th>
+                </tr>
+                <tr>
+                    <td> Email </td>
+                    <td> ladnerm78@gmail.com </td>
+                </tr>
+                <tr>
+                    <td> LinkedIn </td>
+                    <td> <a href="https://www.linkedin.com/in/max-ladner-1a6766189/">
+                            maxladner</a></td>
+                </tr>
+            </table>
+            </div>
+            <br>
+        </div>
+        <hr>
+        <footer>
+            &copy; designed and coded by Max Ladner
+            <p id="getYear"></p>
+        </footer>
+        
+    </body>
+    
+</html>
